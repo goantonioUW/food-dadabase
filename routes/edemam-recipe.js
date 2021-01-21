@@ -5,6 +5,6 @@ const client = new RecipeSearchClient({
   appKey: '330f6f1844c57d982682197df2522fac'
 });
 
-const results = await client.search({ query: '' });
+const results = await client.search({ query: 'recipe' });
 
 module.exports = RecipeSearchClient;
