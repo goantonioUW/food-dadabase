@@ -8,7 +8,7 @@ VALUES
 ("jkaganovsky", ),
 ("mfrisch87", );
 
-INSERT INTO favorite (username, recipe_id, recipe_name)
+INSERT INTO favorites (username, recipe_id, recipe_name)
 VALUES
 ("Bdomschot", ),
 ("bfourGitHub", ),
