@@ -18,6 +18,16 @@ module.exports = function(sequelize, DataTypes) {
     recipeName: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    // Store joke Setup to create Link back to joke
+    jokeName: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    // Store joke ID to build front end link
+    jokeId: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   });
   return Favorites;
