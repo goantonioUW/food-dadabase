@@ -11,6 +11,9 @@ const PORT = process.env.PORT || 8080;
 const db = require("./models");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// app.engine("handlbars", exphbs({
+//   layoutsDir: `${__dirname}/views/layouts`
+// }));
 app.set("view engine", "handlebars");
 
 // Creating express app and configuring middleware needed for authentication
