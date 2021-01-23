@@ -1,4 +1,3 @@
-
 module.exports = function(sequelize, DataTypes) {
   const List = sequelize.define("List", {
     // Username who enters adds the ingredient to list, so we can join with user list.

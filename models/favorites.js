@@ -1,4 +1,4 @@
-module.exports = function(sequelize, Datatypes) {
+module.exports = function(sequelize, DataTypes) {
   const Favorites = sequelize.define("Favorites", {
     // Username who favorited Recipe
     username: {
@@ -20,4 +20,5 @@ module.exports = function(sequelize, Datatypes) {
       allowNull: false
     }
   });
+  return Favorites;
 };
