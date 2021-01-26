@@ -4,18 +4,19 @@ const isAuthenticated = require("../config/middleware/isAuthenticated");
 const router = require("../controllers/food_controller");
 
 route.get("/api/list", isAuthenticated, (req, res) => {
-    List.findAll({
-        where {
-            UserId: req.user.id
-        }
-    });
+  List.findAll({
+    where: {
+      UserId: req.user.id
+    }
+  });
+  return res;
 });
 
-router.post("/api/list", isAuthenticated (req, res) => {
-    List.create ({
-        name: req.body.name,
-        UserId: req.user.id
-    }).then(newIngredient => {
-        res.json(newIngredient)
-    });
+router.post("/api/list", isAuthenticated, (req, res) => {
+  List.create({
+    name: req.body.name,
+    UserId: req.user.id
+  }).then(newIngredient => {
+    res.json(newIngredient);
+  });
 });
