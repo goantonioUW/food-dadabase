@@ -19,12 +19,6 @@ module.exports = function(sequelize, DataTypes) {
     measurement: {
       type: DataTypes.STRING,
       allowNull: true
-    },
-    // Date ingredient was added to list
-    addedDate: {
-      type: DataTypes.DATEONLY,
-      allowNull: false,
-      isDate: true
     }
   });
   return List;

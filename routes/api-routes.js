@@ -63,13 +63,24 @@ module.exports = function(app) {
   });
 
   // Pull User's Favorites
-  app.get("/api/favorites", (req, res) => {
-    db.Favorites.findAll({
+  app.get("/api/favRecipes", (req, res) => {
+    db.FavoriteRecipes.findAll({
       where: {
         username: req.user.email
       }
-    }).then(dbFavorites => {
-      res.json(dbFavorites);
+    }).then(dbFavoriteRecipes => {
+      res.json(dbFavoriteRecipes);
+    });
+  });
+
+  // Pull User's Favorites
+  app.get("/api/favJokes", (req, res) => {
+    db.FavoriteJokes.findAll({
+      where: {
+        username: req.user.email
+      }
+    }).then(dbFavoriteJokes => {
+      res.json(dbFavoriteJokes);
     });
   });
 };
