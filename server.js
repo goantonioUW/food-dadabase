@@ -11,15 +11,20 @@ const PORT = process.env.PORT || 8080;
 const db = require("./models");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-// app.engine("handlbars", exphbs({
+// app.engine("handlebars", exphbs({
 //   layoutsDir: `${__dirname}/views/layouts`
 // }));
+
 app.set("view engine", "handlebars");
 
 // Creating express app and configuring middleware needed for authentication
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
+
+// app.get("/", (req, res) => {
+//   res.render("index", {layout: "main"});
+// });
 // We need to use sessions to keep track of our user's login status
 app.use(
   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
