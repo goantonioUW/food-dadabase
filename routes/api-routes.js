@@ -52,7 +52,7 @@ module.exports = function(app) {
   });
 
   // Pull current user's List
-  app.get("/api/List", (req, res) => {
+  app.get("/api/list", (req, res) => {
     db.List.findAll({
       where: {
         username: req.body.email
@@ -62,4 +62,14 @@ module.exports = function(app) {
     });
   });
 
+  // Pull User's Favorites
+  app.get("/api/favorites", (req, res) => {
+    db.Favorites.findAll({
+      where: {
+        username: req.body.email
+      }
+    }).then(dbFavorites => {
+      res.json(dbFavorites);
+    });
+  });
 };
