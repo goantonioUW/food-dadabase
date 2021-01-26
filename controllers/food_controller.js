@@ -44,7 +44,7 @@ router.post("/api/list", (req, res) => {
   );
 });
 
-// 
+//
 router.put("/api/list/:id", (req, res) => {
   const condition = `id = ${req.params.id}`;
 
