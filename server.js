@@ -13,17 +13,23 @@ const db = require("./models");
 // app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 app.set("views", `${__dirname}/public/js/views`);
-app.engine("handlebars", exphbs({
-  layoutsDir: `${__dirname}/public/js/views/layouts`,
-  defaultLayout: "main",
-  partialsDir: `${__dirname}/public/js/views/partials`
-}));
-
+app.engine(
+  "handlebars",
+  exphbs({
+    layoutsDir: `${__dirname}/public/js/views/layouts`,
+    defaultLayout: "main",
+    partialsDir: `${__dirname}/public/js/views/partials`
+  })
+);
 
 // Creating express app and configuring middleware needed for authentication
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
+
+// app.get("/", (req, res) => {
+//   res.render("index", {layout: "main"});
+// });
 // We need to use sessions to keep track of our user's login status
 app.use(
   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
