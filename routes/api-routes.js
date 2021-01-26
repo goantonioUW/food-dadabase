@@ -50,4 +50,16 @@ module.exports = function(app) {
       });
     }
   });
+
+  // Pull current user's List
+  app.get("/api/List", (req, res) => {
+    db.List.findAll({
+      where: {
+        username: req.body.email
+      }
+    }).then(dbList => {
+      res.json(dbList);
+    });
+  });
+
 };
