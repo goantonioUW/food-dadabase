@@ -50,4 +50,26 @@ module.exports = function(app) {
       });
     }
   });
+
+  // Pull current user's List
+  app.get("/api/list", (req, res) => {
+    db.List.findAll({
+      where: {
+        username: req.user.email
+      }
+    }).then(dbList => {
+      res.json(dbList);
+    });
+  });
+
+  // Pull User's Favorites
+  app.get("/api/favorites", (req, res) => {
+    db.Favorites.findAll({
+      where: {
+        username: req.user.email
+      }
+    }).then(dbFavorites => {
+      res.json(dbFavorites);
+    });
+  });
 };
