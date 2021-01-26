@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
-  const Favorites = sequelize.define("Favorites", {
-    // UserID who favorited Recipe and joke
+  const FavoriteRecipes = sequelize.define("FavoriteRecipes", {
+    // UserID who favorited Recipe
     username: {
       type: DataTypes.INTEGER,
       allowNull: false
@@ -14,17 +14,7 @@ module.exports = function(sequelize, DataTypes) {
     recipeName: {
       type: DataTypes.STRING,
       allowNull: false
-    },
-    // Store joke Setup to create Link back to joke
-    jokeName: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    // Store joke ID to build front end link
-    jokeId: {
-      type: DataTypes.STRING,
-      allowNull: false
     }
   });
-  return Favorites;
+  return FavoriteRecipes;
 };
