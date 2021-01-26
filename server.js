@@ -10,11 +10,17 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-// app.engine("handlbars", exphbs({
-//   layoutsDir: `${__dirname}/views/layouts`
-// }));
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+app.set("views", `${__dirname}/public/js/views`);
+app.engine(
+  "handlebars",
+  exphbs({
+    layoutsDir: `${__dirname}/public/js/views/layouts`,
+    defaultLayout: "main",
+    partialsDir: `${__dirname}/public/js/views/partials`
+  })
+);
 
 // Creating express app and configuring middleware needed for authentication
 app.use(express.urlencoded({ extended: true }));
