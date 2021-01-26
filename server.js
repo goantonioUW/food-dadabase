@@ -26,6 +26,10 @@ app.engine(
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
+
+// app.get("/", (req, res) => {
+//   res.render("index", {layout: "main"});
+// });
 // We need to use sessions to keep track of our user's login status
 app.use(
   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
