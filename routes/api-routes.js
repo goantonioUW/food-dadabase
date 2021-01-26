@@ -55,7 +55,7 @@ module.exports = function(app) {
   app.get("/api/list", (req, res) => {
     db.List.findAll({
       where: {
-        username: req.body.email
+        username: req.user.email
       }
     }).then(dbList => {
       res.json(dbList);
@@ -66,7 +66,7 @@ module.exports = function(app) {
   app.get("/api/favorites", (req, res) => {
     db.Favorites.findAll({
       where: {
-        username: req.body.email
+        username: req.user.email
       }
     }).then(dbFavorites => {
       res.json(dbFavorites);
