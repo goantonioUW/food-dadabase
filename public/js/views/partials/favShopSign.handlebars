@@ -1,75 +1,93 @@
 <div class="card-cluster">
-    
-        <div class="card col-sm-4 col-xs-8">
-            {{!-- <img src="..." class="card-img-top" alt="..."> --}}
-            <div class="card-body">
-                <h5 class="card-title">Favorites</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
-            <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-            </div>
-        </div>
-    
-        <div class="card col-sm-4 col-xs-8" style="width: 25rem;">
-            {{!-- <img src="..." class="card-img-top" alt="..."> --}}
-            <div class="card-body">
-                <h5 class="card-title">Shopping List</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
-            <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-            </div>
-        </div>
-    
-        {{!-- <div class="card" style="width: 25rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Sign in/up card</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
-            <div class="card-body">
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-            </div>
-        </div> --}}
 
-        <div class="card col-sm-8 col-xs-8" style="width: 50rem">
-            <div class="card-header">
-                Dad-Joke Moment
-            </div>
-            <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                    <p>Insert dad joke here. Insert dad joke here. Insert dad joke here.</p>
-                    <footer class="blockquote-footer">Insert applause<cite title="Source Title">
-
-                        </cite></footer>
-                </blockquote>
-            </div>
+    <div class="card col-sm-4 col-xs-8" style="min-width: 22rem;">
+        {{!-- <img src="..." class="card-img-top" alt="..."> --}}
+        <div class="card-body">
+            <h5 class="card-title">Favorites</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's
+                content.</p>
         </div>
-    
-    
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+        <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+        </div>
     </div>
+
+    <div class="card col-sm-4 col-xs-8" style="min-width: 22rem;">
+        {{!-- <img src="..." class="card-img-top" alt="..."> --}}
+        <div class="card-body">
+            <h5 class="card-title">Shopping List</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's
+                content.</p>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item" style="justify-content:space-between;">
+                <input type="checkbox" value="" aria-label="...">
+                Cras justo odio
+            <button type="button" class="btn btn-info add-new"><i class="fa fa-plus" ></i> Add New</button>
+            </li>
+            <li class="list-group-item">
+                <input  type="checkbox" value="" aria-label="...">
+                Dapibus ac facilisis in
+            </li>
+            <li class="list-group-item">
+                <input  type="checkbox" value="" aria-label="...">
+                Morbi leo risus
+            </li>
+            <li class="list-group-item">
+                <input  type="checkbox" value="" aria-label="...">
+                Porta ac consectetur ac
+            </li>
+            <li class="list-group-item">
+                <input  type="checkbox" value="" aria-label="...">
+                Vestibulum at eros
+            </li>
+        </ul>
+        <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+        </div>
+    </div>
+
+    {{!-- <div class="card" style="width: 25rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Sign in/up card</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's
+                content.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+        <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+        </div>
+    </div> --}}
+
+    <div class="card col-sm-8 col-xs-8 col-md-8" style="min-width: 50rem">
+        <div class="card-header">
+            Dad-Joke Moment
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>Insert dad joke here. Insert dad joke here. Insert dad joke here.</p>
+                <footer class="blockquote-footer">Insert applause<cite title="Source Title">
+
+                    </cite></footer>
+            </blockquote>
+        </div>
+    </div>
+
+
+</div>
