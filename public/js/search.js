@@ -1,12 +1,13 @@
 $(document).ready(() => {
-  const search = $("input#search-input");
+  const search = $("input#nav-item");
 
   // When search button is clicked
   search.on("submit", e => {
     e.preventDefault();
 
     const searchInput = {
-      search: $("search-input")
+      email: req.user.email,
+      searchName: $("#search-input")
         .val()
         .trim()
     };
