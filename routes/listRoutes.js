@@ -12,7 +12,7 @@ route.get("/api/list", isAuthenticated, (req, res) => {
   return res;
 });
 
-router.post("/api/list", isAuthenticated, (req, res) => {
+route.post("/api/list", isAuthenticated, (req, res) => {
   List.create({
     name: req.body.name,
     UserId: req.user.id
@@ -20,3 +20,5 @@ router.post("/api/list", isAuthenticated, (req, res) => {
     res.json(newIngredient);
   });
 });
+
+module.exports = route;
