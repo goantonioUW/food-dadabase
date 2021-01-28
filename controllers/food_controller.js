@@ -1,16 +1,12 @@
-const express = require("express");
+const app = require("express").Router();
 
-const router = express.Router();
-
-const favorites = require("../models/favorites");
-
-const list = require("../models/shopping-list");
+const router = require("../models");
 
 //Main page view of recipes and dad jokes
-router.get("/", (req, res) => {
-  list.selectAll(data => {
+app.get("/", (req, res) => {
+  router.selectAll(data => {
     const foodObj = {
-      burgers: data
+      search: data
     };
     res.render("index", foodObj);
     console.log("Table log:", foodObj);
@@ -18,8 +14,8 @@ router.get("/", (req, res) => {
 });
 
 //View of all favorites list
-router.post("/api/favorites", (req, res) => {
-  favorites.insertOne(
+app.post("/api/favorites", (req, res) => {
+  router.insertOne(
     ["username", "recipeId", "recipeName"],
     [req.body.username, req.body.recipeId, req.body.recipeName],
     data => {
@@ -29,8 +25,8 @@ router.post("/api/favorites", (req, res) => {
 });
 
 //View of all shopping list
-router.post("/api/list", (req, res) => {
-  favorites.insertOne(
+app.post("/api/list", (req, res) => {
+  router.insertOne(
     ["username", "ingredient", "amount", "measurement"],
     [
       req.body.username,
@@ -44,22 +40,13 @@ router.post("/api/list", (req, res) => {
   );
 });
 
-//
-router.put("/api/list/:id", (req, res) => {
-  const condition = `id = ${req.params.id}`;
-
-  console.log("Condition: ", condition);
-
-  list.updateOne(
-    {
-      devoured: req.body.devoured
-    },
-    condition,
+//View of search
+app.post("/api/search", (req, res) => {
+  router.insertOne(
+    ["username", "searchId", "searchName"],
+    [req.body.username, req.body.searchId, req.body.searchName],
     data => {
-      if (data.changedRows === 0) {
-        return res.status(404).end();
-      }
-      res.status(200).end();
+      res.json({ id: data.insertId });
     }
   );
 });
