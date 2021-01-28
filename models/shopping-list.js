@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   const List = sequelize.define("List", {
-    // UserID who enters adds the ingredient to list, so we can join with user list.
+    // User Name who enters adds the ingredient to list, so we can join with user list.
     username: {
       type: DataTypes.INTEGER,
       allowNull: false

@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   const FavoriteJokes = sequelize.define("FavoriteJokes", {
-    // UserID who favorited Joke
+    // User Name who favorited Joke
     username: {
       type: DataTypes.INTEGER,
       allowNull: false

@@ -1,0 +1,13 @@
+[1mdiff --git a/config/config.json b/config/config.json[m
+[1mindex bd49bb7..d82b896 100644[m
+[1m--- a/config/config.json[m
+[1m+++ b/config/config.json[m
+[36m@@ -1,7 +1,7 @@[m
+ {[m
+   "development": {[m
+     "username": "root",[m
+[31m-    "password": "password",[m
+[32m+[m[32m    "password": "passw0rd",[m
+     "database": "fooddadabase_db",[m
+     "host": "127.0.0.1",[m
+     "dialect": "mysql"[m
