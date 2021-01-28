@@ -83,4 +83,15 @@ module.exports = function(app) {
       res.json(dbFavoriteJokes);
     });
   });
+
+  // Pull User's Search List
+  app.get("/api/search", (req, res) => {
+    db.Search.findAll({
+      where: {
+        username: req.user.email
+      }
+    }).then(dbSearch => {
+      res.json(dbSearch);
+    });
+  });
 };
