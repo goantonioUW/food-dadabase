@@ -1,10 +1,11 @@
 const http = require("https");
+jokeKeyword = Search;
 
 const options = {
   method: "GET",
   hostname: "dad-jokes.p.rapidapi.com",
   port: null,
-  path: "/joke/search?term=pepper",
+  path: "/joke/search?term=" + jokeKeyword,
   headers: {
     "x-rapidapi-key": "3d02f8056amshd148c6cae11c0ffp18e242jsn76c5e82973e1",
     "x-rapidapi-host": "dad-jokes.p.rapidapi.com",
