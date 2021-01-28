@@ -50,10 +50,11 @@ body {
   height: 800px;
   width: 100%; */
   margin-top: 25px;
-  background-image: url("./assets/mediterranean-cuisine-2378758_1920.jpg");
+  background-image: url("./assets/salad-wooden-utensils.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  
   
 }
 
@@ -74,10 +75,14 @@ h2 {
   font-size: 4rem;
   color: #ff9966;
   margin: auto;
+  align-content: center;
 }
 .navbar {
   font-size: 4rem;
   color: #ff9966;
+  margin-left: 19px;
+  margin-right: 19px;
+
 }
 
 .nav-item,
@@ -105,6 +110,7 @@ h2 {
   text-shadow: #ff9966 2px 2px 0px, #000000 4px 4px 0px;color: #ff9966;
   justify-content: space-between;
   display: flex;
+  border-radius: 1.5rem;
 }
 
 #dadSpan {
@@ -118,13 +124,40 @@ li {
 
 .card {
   display: inline-block;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   text-align: left;
-  
+  border: thin;
+  border-radius: 1.5rem;
+  background: #00000080;
+  margin: 5px;  
+}
+
+.card-title {
+  font-family: 'Hachi Maru Pop', cursive;
+  color: white;
+  font-size: 3rem;
+  color: #ff9966;
+  justify-items: center;
+}
+
+.card-link {
+  color: #ff9966;
+  margin: 5px;
 }
 
 .card-cluster {
-  text-align: center;
+  justify-content: space-evenly;
+  /* margin-left: 5px; */
+  
+}
+
+/* .dad-joke-card {
+  margin-right: 0px;
+} */
+
+.list-group-item {
+  justify-content: space-between;
+  color: black;
 }
 
 .footer {
