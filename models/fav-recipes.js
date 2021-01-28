@@ -10,6 +10,11 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
+    // Store Recipe image for building members area card
+    recipeImg: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     // Store Recipe name to build front end link
     recipeName: {
       type: DataTypes.STRING,
