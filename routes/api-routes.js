@@ -50,4 +50,48 @@ module.exports = function(app) {
       });
     }
   });
+
+  // Pull current user's List
+  app.get("/api/list", (req, res) => {
+    db.List.findAll({
+      where: {
+        username: req.user.email
+      }
+    }).then(dbList => {
+      res.json(dbList);
+    });
+  });
+
+  // Pull User's Favorites
+  app.get("/api/favRecipes", (req, res) => {
+    db.FavoriteRecipes.findAll({
+      where: {
+        username: req.user.email
+      }
+    }).then(dbFavoriteRecipes => {
+      res.json(dbFavoriteRecipes);
+    });
+  });
+
+  // Pull User's Favorites
+  app.get("/api/favJokes", (req, res) => {
+    db.FavoriteJokes.findAll({
+      where: {
+        username: req.user.email
+      }
+    }).then(dbFavoriteJokes => {
+      res.json(dbFavoriteJokes);
+    });
+  });
+
+  // Pull User's Search List
+  app.get("/api/search", (req, res) => {
+    db.Search.findAll({
+      where: {
+        username: req.user.email
+      }
+    }).then(dbSearch => {
+      res.json(dbSearch);
+    });
+  });
 };
