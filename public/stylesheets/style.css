@@ -39,10 +39,10 @@ h2 {
   padding-right: 100px;
 }
 
-.nav-item
- {
+.nav-item {
   list-style-type: none;
   color: white;
+}
 
 .navContainer {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -55,7 +55,7 @@ h2 {
   width: 90vw;
 }
 
-.searchBtn 
+.searchBtn
 {
   font-size: 1rem;
   font-family: "Hachi Maru Pop", cursive;
@@ -125,7 +125,7 @@ li {
   border: thin;
   border-radius: 1.5rem;
   background: #00000080;
-  margin: 5px;  
+  margin: 5px;
 }
 
 .card-title {
@@ -144,7 +144,7 @@ li {
 .card-cluster {
   justify-content: space-evenly;
   /* margin-left: 5px; */
-  
+
 }
 
 /* .dad-joke-card {
