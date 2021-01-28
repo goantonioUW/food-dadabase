@@ -36,30 +36,23 @@ h2 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
   Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2rem;
-  margin: auto;
-  align-content: center;
-}
-.navbar {
-  font-size: 4rem;
-  color: #ff9966;
-  margin-left: 19px;
-  margin-right: 19px;
+  padding-right: 100px;
 }
 
-.nav-item,
-.nav-link
+.nav-item
  {
   list-style-type: none;
   color: white;
-}
 
 .navContainer {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2rem;
   background: #74747450;
-  justify-content: space-between;
   display: flex;
+  text-shadow: #ff9966 1px 1px 0px, #000000 2px 2px 0px;
+  margin: auto;
+  width: 90vw;
 }
 
 .searchBtn 
@@ -77,6 +70,7 @@ h2 {
 	font-weight:bold;
 	padding:6px 20px;
   text-shadow:0px 1px 0px #ffee66;
+  color: white;
 }
 
 .searchBar {
@@ -87,10 +81,18 @@ h2 {
 	border:1px solid #ffaa22;
 	display:inline-block;
 	font-size:20px;
-	font-weight:bold;
-	padding:6px 20px;
+  font-weight:bold;
+  width: 500px;
 }
 
+.logoutBtn {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  right: 100px;
+}
 
 .loginBtn:hover {
   color: #ff9966;
