@@ -7,11 +7,10 @@
             <p class="card-text">Food you wanna eat over and over again...</p>
         </div>
         <div>
-            <img src="..." class="img-thumbnail" alt="...">
-            <img src="..." class="img-thumbnail" alt="...">
-            <img src="..." class="img-thumbnail" alt="...">
-            <img src="..." class="img-thumbnail" alt="...">
-        </div>
+            {{#each favoriteRecipes}}
+            <img src="{{recipeImg}}" class="img-thumbnail" alt="{{recipeName}}">
+            {{/each}}
+            </div>
         <div class="card-body">
             <a href="#" class="card-link fas fa-receipt fa-2x"></a>
             
@@ -26,31 +25,14 @@
                 promise your creations will be instagram worthy, sad face.</p>
         </div>
         <ul class="list-group">
+            {{#each lists}}
             <li class="list-group-item" style="justify-content:space-between;">
+                {{ingredient}}
                 <input type="checkbox">
                 <input type="text" style="min-width: 31rem; border: transparent;">
 
             </li>
-            <li class="list-group-item">
-                <input type="checkbox">
-                <input type="text" style="min-width: 31rem; border: transparent;">
-
-            </li>
-            <li class="list-group-item">
-                <input type="checkbox">
-                <input type="text" style="min-width: 31rem; border: transparent;">
-
-            </li>
-            <li class="list-group-item">
-                <input type="checkbox">
-                <input type="text" style="min-width: 31rem; border: transparent;">
-
-            </li>
-            <li class="list-group-item">
-                <input type="checkbox">
-                <input type="text" style="min-width: 31rem; border: transparent;">
-
-            </li>
+            {{/each}}
         </ul>
         <div class="card-body">
             <a href="#" class="card-link fas fa-cart-plus fa-2x"></a>

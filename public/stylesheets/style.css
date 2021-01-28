@@ -53,8 +53,7 @@ h2 {
 .searchBtn {
   list-style-type: none;
   color: white;
-  visibility: hidden;
-}
+ }
 
 .loginBtn,
 .searchBtn {
