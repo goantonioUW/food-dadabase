@@ -1,5 +1,5 @@
 const http = require("https");
-jokeKeyword = Search;
+const jokeKeyword = Search;
 
 const options = {
   method: "GET",
