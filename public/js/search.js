@@ -1,23 +1,31 @@
-$(document).ready(() => {
-  const search = $("input#nav-item");
+// Getting our api route to call from the edemam-recipe.js
+const getSearch = search => {
+  const url = "/api/recipe/" + search;
 
-  // When search button is clicked
-  search.on("submit", e => {
-    e.preventDefault();
-
-    const searchInput = {
-      email: req.user.email,
-      searchName: $("#search-input")
-        .val()
-        .trim()
-    };
-
-    $.ajax("/api/search", {
-      type: "POST",
-      data: searchInput
-    }).then(() => {
-      console.log("Search success!", searchInput);
-      location.reload();
-    });
+  $.ajax({
+    url: url,
+    method: "GET"
+  }).then(results => {
+    console.log(results);
+    displaySearch(results.hits);
   });
+};
+
+// Passing in the results from our api search onto the searchResults.handlebars
+const displaySearch = searches => {
+  $("#recipe-name").empty();
+
+  for (let i = 0; i < searches.length; i++) {
+    $("#recipe-name").append(`
+
+    <img src="${searches[i].recipe.image}"  class="img-thumbnail" alt="">
+     `);
+  }
+};
+
+// Search input entry on button click
+$(".searchBtn").on("click", () => {
+  const searchInput = $(".searchBar").val();
+
+  getSearch(searchInput);
 });
