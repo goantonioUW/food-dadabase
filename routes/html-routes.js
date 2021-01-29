@@ -41,11 +41,11 @@ module.exports = function(app) {
       }
     })
       .then(
-        dbFavoriteRecipes = db.FavoriteRecipes.findAll({
+        (dbFavoriteRecipes = db.FavoriteRecipes.findAll({
           where: {
             username: req.user.email
           }
-        })
+        }))
       )
       .then(
         res.render("index", {
