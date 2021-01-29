@@ -1,4 +1,166 @@
 form.signup,
-form.login {
+form.login,
+form.members {
   margin-top: 50px;
+  color: white;
+  size: 6rem;
+}
+
+body {
+  /* Applies settings to background image
+  height: 800px;
+  width: 100%; */
+  margin-top: 25px;
+  background-image: url("./assets/salad-wooden-utensils.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+p {
+  font-family: "Hachi Maru Pop", cursive;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 36px;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.navbar-brand {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  padding-right: 100px;
+}
+
+.nav-item {
+  list-style-type: none;
+  color: white;
+}
+
+.navContainer {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  background: #74747450;
+  display: flex;
+  text-shadow: #ff9966 1px 1px 0px, #000000 2px 2px 0px;
+  margin: auto;
+  width: 90vw;
+}
+
+.searchBtn
+{
+  font-size: 1rem;
+  font-family: "Hachi Maru Pop", cursive;
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:6px 20px;
+  text-shadow:0px 1px 0px #ffee66;
+  color: white;
+}
+
+.searchBar {
+  font-size: 1rem;
+  font-family: "Hachi Maru Pop", cursive;
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	font-size:20px;
+  font-weight:bold;
+  width: 500px;
+}
+
+.logoutBtn {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  right: 100px;
+}
+
+.loginBtn:hover {
+  color: #ff9966;
+}
+
+.container-fluid {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  color: #ff9966;
+  background: #74747450;
+  text-shadow: #ff9966 1px 1px 0px, #000000 2px 2px 0px;
+  color: #ff9966;
+  justify-content: space-between;
+  display: flex;
+}
+
+#dadSpan {
+  font-family: "Hachi Maru Pop", cursive;
+}
+
+li {
+  color: white;
+}
+
+.card {
+  display: inline-block;
+  /* margin-bottom: 30px; */
+  text-align: left;
+  border: thin;
+  border-radius: 1.5rem;
+  background: #00000080;
+  margin: 5px;
+}
+
+.card-title {
+  font-family: 'Hachi Maru Pop', cursive;
+  color: white;
+  font-size: 3rem;
+  color: #ff9966;
+  justify-items: center;
+}
+
+.card-link {
+  color: #ff9966;
+  margin: 5px;
+}
+
+.card-cluster {
+  justify-content: space-evenly;
+  /* margin-left: 5px; */
+
+}
+
+/* .dad-joke-card {
+  margin-right: 0px;
+} */
+
+.list-group-item {
+  justify-content: space-between;
+  color: black;
+}
+
+.footer {
+  color: #ff9966;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px; /* Height of the footer */
+  background: #f6d852;
 }

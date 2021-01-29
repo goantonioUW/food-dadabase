@@ -1,18 +1,35 @@
 // Requiring necessary npm packages
 const express = require("express");
+const exphbs = require("express-handlebars");
 const session = require("express-session");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
+const app = express();
 
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
 
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+app.set("views", `${__dirname}/public/js/views`);
+app.engine(
+  "handlebars",
+  exphbs({
+    layoutsDir: `${__dirname}/public/js/views/layouts`,
+    defaultLayout: "main",
+    partialsDir: `${__dirname}/public/js/views/partials`
+  })
+);
+
 // Creating express app and configuring middleware needed for authentication
-const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
+
+// app.get("/", (req, res) => {
+//   res.render("index", {layout: "main"});
+// });
 // We need to use sessions to keep track of our user's login status
 app.use(
   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
