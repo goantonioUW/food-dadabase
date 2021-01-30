@@ -9,16 +9,6 @@ module.exports = function(sequelize, DataTypes) {
     ingredient: {
       type: DataTypes.STRING,
       allowNull: false
-    },
-    // Amount of the ingredient on list
-    amount: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    // Measurement type (teaspoons, tablespoons, cups, lbs, etc.)
-    measurement: {
-      type: DataTypes.STRING,
-      allowNull: true
     }
   });
   return List;
