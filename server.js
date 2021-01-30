@@ -10,6 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
 
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 app.set("views", `${__dirname}/public/js/views`);
 app.engine(
@@ -26,6 +27,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+// app.get("/", (req, res) => {
+//   res.render("index", {layout: "main"});
+// });
 // We need to use sessions to keep track of our user's login status
 app.use(
   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
@@ -34,10 +38,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Requiring our routes
-require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
-
-app.use(require("./routes/edemam-recipe"));
+app.use(require("./routes"));
+// require("./routes/html-routes.js")(app);
+// require("./routes/api-routes.js")(app);
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(() => {

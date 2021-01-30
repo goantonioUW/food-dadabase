@@ -4,8 +4,8 @@ const { RecipeSearchClient } = require('edamam-api');
 
 router.get("/api/recipe/:search", async (req, res) => {
   const client = new RecipeSearchClient({
-    appId: "a67a7625",
-    appKey: "330f6f1844c57d982682197df2522fac"
+    appId: require("../config/options")("EDEMAM_ID"),
+    appKey: require("../config/options")("EDEMAM_API")
   });
 
   const results = await client.search({ query: req.params.search });

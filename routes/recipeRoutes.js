@@ -1,8 +1,8 @@
 const { Recipe } = require("../models");
-const route = require("express").Router();
+const router = require("express").Router();
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
-route.get("/api/recipes", isAuthenticated, (req, res) => {
+router.get("/api/recipes", isAuthenticated, (req, res) => {
   Recipe.findAll({
     where: {
       UserId: req.user.id
@@ -11,7 +11,7 @@ route.get("/api/recipes", isAuthenticated, (req, res) => {
   return res;
 });
 
-route.post("/api/recipes", isAuthenticated, (req, res) => {
+router.post("/api/recipes", isAuthenticated, (req, res) => {
   Recipe.create({
     name: req.body.name,
     UserId: req.user.id
@@ -20,4 +20,4 @@ route.post("/api/recipes", isAuthenticated, (req, res) => {
   });
 });
 
-module.exports = route;
+module.exports = router;
