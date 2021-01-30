@@ -4,7 +4,7 @@
 
   ## Table Of Contents
   - [Description](#description)
-  - [User story](#user Story)
+  - [User story](#userstory)
   - [Contributing](#contributing)
   - [Example](#example)
 
@@ -34,5 +34,7 @@
   ![Screenshot of the members page](public/stylesheets/assets/screenshot.png)
   
   
+  ## Presentation
+  [food-dadabase Presentation Slides](https://docs.google.com/presentation/d/1MjIPanVPaaMoMh3-gfeyL3os7C-lBUWjLQqFEKfd1Wg/edit?usp=sharing)
 
 
