@@ -29,9 +29,10 @@
 
 
   ## Example
-  screen shots of the application.
-  ![Screenshot of the members page](assets/screenshot.png)
-  ![Screenshot of the login page](assets/Screenshot2.png)
+    Screenshots of the application.
+  ![Screenshot of the login page](public/stylesheets/assets/Screenshot2.png)
+  ![Screenshot of the members page](public/stylesheets/assets/screenshot.png)
+  
   
 
 
