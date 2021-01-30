@@ -51,17 +51,6 @@ router.get("/api/user_data", (req, res) => {
   }
 });
 
-// Pull current user's List
-router.get("/api/list", (req, res) => {
-  db.List.findAll({
-    where: {
-      username: req.user.email
-    }
-  }).then(dbList => {
-    res.json(dbList);
-  });
-});
-
 // Pull User's Favorites
 router.get("/api/favRecipes", (req, res) => {
   db.FavoriteRecipes.findAll({
