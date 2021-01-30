@@ -1,9 +1,8 @@
 const { List } = require("../models");
-const route = require("express").Router();
+const router = require("express").Router();
 const isAuthenticated = require("../config/middleware/isAuthenticated");
-const router = require("../controllers/food_controller");
 
-route.get("/api/list", isAuthenticated, (req, res) => {
+router.get("/api/list", isAuthenticated, (req, res) => {
   List.findAll({
     where: {
       UserId: req.user.id
@@ -12,7 +11,7 @@ route.get("/api/list", isAuthenticated, (req, res) => {
   return res;
 });
 
-route.post("/api/list", isAuthenticated, (req, res) => {
+router.post("/api/list", isAuthenticated, (req, res) => {
   List.create({
     name: req.body.name,
     UserId: req.user.id
@@ -21,4 +20,4 @@ route.post("/api/list", isAuthenticated, (req, res) => {
   });
 });
 
-module.exports = route;
+module.exports = router;

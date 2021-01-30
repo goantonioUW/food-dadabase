@@ -1,8 +1,8 @@
 const { Search } = require("../models");
-const route = require("express").Router();
+const router = require("express").Router();
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
-route.get("/api/search", isAuthenticated, (req, res) => {
+router.get("/api/search", isAuthenticated, (req, res) => {
   Search.findAll({
     where: {
       UserId: req.user.id
@@ -11,7 +11,7 @@ route.get("/api/search", isAuthenticated, (req, res) => {
   return res;
 });
 
-route.post("/api/search", isAuthenticated, (req, res) => {
+router.post("/api/search", isAuthenticated, (req, res) => {
   Search.create({
     name: req.body.name,
     UserId: req.user.id
@@ -20,4 +20,4 @@ route.post("/api/search", isAuthenticated, (req, res) => {
   });
 });
 
-module.exports = route;
+module.exports = router;
