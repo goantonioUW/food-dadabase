@@ -1,6 +1,136 @@
-<div class="card-cluster col-sm-12 col-xs-12 col-md-12">
 
-    <div class="card col-sm-4 col-xs-8" style="min-width: 40rem; min-height: 40rem;">
+<div class="card-cluster col-sm-12 col-xs-12 col-md-12">
+    <div class="card col-sm-4 col-xs-8 col-md-3" style="min-width: 40rem; min-height: 67.75rem;">
+        {{!-- <img src="..." class="card-img-top" alt="..."> --}}
+        <div class="card-body">
+            <h5 class="card-title">Shopping List</h5>
+            <p class="card-text">Here's what is missing from your perfect meal! Perfection not guaranteed. We can't
+                promise your creations will be instagram worthy, sad face.</p>
+        </div>
+        {{!-- <ul class="list-group">
+            {{#each lists}}
+            <li class="list-group-item" style="justify-content:space-between;">
+                {{ingredient}}
+                <input type="checkbox">
+                <input type="text" id="groceryTextEl" style="min-width: 31rem; border: transparent;">
+
+            </li>
+            {{/each}}
+        </ul> --}}
+        <div class="listCluster" style="margin-bottom: 15px;">
+
+            <div class="input-group">
+                <input type="text" id="saved-item-1" class="groceryItem" data-item="1" placeholder="Get this at the store!" style="min-width: 29rem;"
+                    aria-label="Grocery input field with save and delete buttons">
+                {{!-- <button class="card-link fas fa-cart-plus fa-2x" type="button"></button>
+                <button class="card-link fas fa-trash fa-2x" type="button"></button> --}}
+                <a href="#" class="card-link saveToShopList fas fa-cart-plus fa-2x"></a>
+                <a href="#" class="card-link deleteFromShopList fas fa-trash fa-2x"></a>
+            </div>
+            <div class="input-group">
+                <input type="text" id="saved-item-2" class="groceryItem" data-item="2" placeholder="You gotta get this too!" style="min-width: 29rem;"
+                    aria-label="Grocery input field with save and delete buttons">
+                {{!-- <button class="card-link fas fa-cart-plus fa-2x" type="button"></button>
+                <button class="card-link fas fa-trash fa-2x" type="button"></button> --}}
+                <a href="#" class="card-link saveToShopList fas fa-cart-plus fa-2x"></a>
+                <a href="#" class="card-link deleteFromShopList fas fa-trash fa-2x"></a>
+            </div>
+            <div class="input-group">
+                <input type="text" id="saved-item-3" class="groceryItem" data-item="3" placeholder="Oh, and you might need this!"
+                    style="min-width: 29rem;" aria-label="Grocery input field with save and delete buttons">
+                {{!-- <button class="card-link fas fa-cart-plus fa-2x" type="button"></button>
+                <button class="card-link fas fa-trash fa-2x" type="button"></button> --}}
+                <a href="#" class="card-link saveToShopList fas fa-cart-plus fa-2x"></a>
+                <a href="#" class="card-link deleteFromShopList fas fa-trash fa-2x"></a>
+            </div>
+            <div class="input-group">
+                <input type="text" id="saved-item-4" class="groceryItem" data-item="4" placeholder="And...probably this." style="min-width: 29rem;"
+                    aria-label="Grocery input field with save and delete buttons">
+                {{!-- <button class="card-link fas fa-cart-plus fa-2x" type="button"></button>
+                <button class="card-link fas fa-trash fa-2x" type="button"></button> --}}
+                <a href="#" class="card-link saveToShopList fas fa-cart-plus fa-2x"></a>
+                <a href="#" class="card-link deleteFromShopList fas fa-trash fa-2x"></a>
+            </div>
+            <div class="input-group">
+                <input type="text" id="saved-item-5" class="groceryItem" data-item="5" placeholder="Maybe get this while you're at it."
+                    style="min-width: 29rem;" aria-label="Grocery input field with save and delete buttons">
+                {{!-- <button class="card-link fas fa-cart-plus fa-2x" type="button"></button>
+                <button class="card-link fas fa-trash fa-2x" type="button"></button> --}}
+                <a href="#" class="card-link saveToShopList fas fa-cart-plus fa-2x"></a>
+                <a href="#" class="card-link deleteFromShopList fas fa-trash fa-2x"></a>
+            </div>
+            <div class="input-group">
+                <input type="text" id="saved-item-6" class="groceryItem" data-item="6" placeholder="This too?" style="min-width: 29rem;"
+                    aria-label="Grocery input field with save and delete buttons">
+                {{!-- <button class="card-link fas fa-cart-plus fa-2x" type="button"></button>
+                <button class="card-link fas fa-trash fa-2x" type="button"></button> --}}
+                <a href="#" class="card-link saveToShopList fas fa-cart-plus fa-2x"></a>
+                <a href="#" class="card-link deleteFromShopList fas fa-trash fa-2x"></a>
+            </div>
+            <div class="input-group">
+                <input type="text" id="saved-item-7" class="groceryItem" data-item="7" placeholder="And this..." style="min-width: 29rem;"
+                    aria-label="Grocery input field with save and delete buttons">
+                {{!-- <button class="card-link fas fa-cart-plus fa-2x" type="button"></button>
+                <button class="card-link fas fa-trash fa-2x" type="button"></button> --}}
+                <a href="#" class="card-link saveToShopList fas fa-cart-plus fa-2x"></a>
+                <a href="#" class="card-link deleteFromShopList fas fa-trash fa-2x"></a>
+            </div>
+            <div class="input-group">
+                <input type="text" id="saved-item-8" class="groceryItem" data-item="8" placeholder="Why not (shrug)?" style="min-width: 29rem;"
+                    aria-label="Grocery input field with save and delete buttons">
+                {{!-- <button class="card-link fas fa-cart-plus fa-2x" type="button"></button>
+                <button class="card-link fas fa-trash fa-2x" type="button"></button> --}}
+                <a href="#" class="card-link saveToShopList fas fa-cart-plus fa-2x"></a>
+                <a href="#" class="card-link deleteFromShopList fas fa-trash fa-2x"></a>
+            </div>
+            <div class="input-group">
+                <input type="text" id="saved-item-9" class="groceryItem" data-item="9" placeholder="Of course this too." style="min-width: 29rem;"
+                    aria-label="Grocery input field with save and delete buttons">
+                {{!-- <button class="card-link fas fa-cart-plus fa-2x" type="button"></button>
+                <button class="card-link fas fa-trash fa-2x" type="button"></button> --}}
+                <a href="#" class="card-link saveToShopList fas fa-cart-plus fa-2x"></a>
+                <a href="#" class="card-link deleteFromShopList fas fa-trash fa-2x"></a>
+            </div>
+            <div class="input-group">
+                <input type="text" id="saved-item-10" class="groceryItem" data-item="10" placeholder="What about this?" style="min-width: 29rem;"
+                    aria-label="Grocery input field with save and delete buttons">
+                {{!-- <button class="card-link fas fa-cart-plus fa-2x" type="button"></button>
+                <button class="card-link fas fa-trash fa-2x" type="button"></button> --}}
+                <a href="#" class="card-link saveToShopList fas fa-cart-plus fa-2x"></a>
+                <a href="#" class="card-link deleteFromShopList fas fa-trash fa-2x"></a>
+            </div>
+            <div class="input-group">
+                <input type="text" id="saved-item-11" class="groceryItem" data-item="11" placeholder="What about this?" style="min-width: 29rem;"
+                    aria-label="Grocery input field with save and delete buttons">
+                {{!-- <button class="card-link fas fa-cart-plus fa-2x" type="button"></button>
+                <button class="card-link fas fa-trash fa-2x" type="button"></button> --}}
+                <a href="#" class="card-link saveToShopList fas fa-cart-plus fa-2x"></a>
+                <a href="#" class="card-link deleteFromShopList fas fa-trash fa-2x"></a>
+            </div>
+            <div class="input-group">
+                <input type="text" id="saved-item-12" class="groceryItem" data-item="12" placeholder="What about this?" style="min-width: 29rem;"
+                    aria-label="Grocery input field with save and delete buttons">
+                {{!-- <button class="card-link fas fa-cart-plus fa-2x" type="button"></button>
+                <button class="card-link fas fa-trash fa-2x" type="button"></button> --}}
+                <a href="#" class="card-link saveToShopList fas fa-cart-plus fa-2x"></a>
+                <a href="#" class="card-link deleteFromShopList fas fa-trash fa-2x"></a>
+            </div>
+            <div class="input-group">
+                <input type="text" id="saved-item-13" class="groceryItem" data-item="13" placeholder="What about this?" style="min-width: 29rem;"
+                    aria-label="Grocery input field with save and delete buttons">
+                {{!-- <button class="card-link fas fa-cart-plus fa-2x" type="button"></button>
+                <button class="card-link fas fa-trash fa-2x" type="button"></button> --}}
+                <a href="#" class="card-link saveToShopList fas fa-cart-plus fa-2x"></a>
+                <a href="#" class="card-link deleteFromShopList fas fa-trash fa-2x"></a>
+            </div>
+            {{!-- <div class="card-body">
+                <a href="#" class="card-link fas fa-cart-plus fa-2x"></a>
+                <a href="#" class="card-link fas fa-trash fa-2x"></a>
+            </div> --}}
+        </div>
+    </div>
+
+    <div class="card col-sm-4 col-xs-8 col-md-3" style="min-width: 40rem; min-height: 67.75rem;">
         {{!-- <img src="..." class="card-img-top" alt="..."> --}}
         <div class="card-body">
             <h5 class="card-title">Favorites</h5>
@@ -10,37 +140,15 @@
             {{#each favoriteRecipes}}
             <img src="{{recipeImg}}" class="img-thumbnail" alt="{{recipeName}}">
             {{/each}}
-            </div>
+        </div>
         <div class="card-body">
             <a href="#" class="card-link fas fa-receipt fa-2x"></a>
-            
+
         </div>
     </div>
 
-    <div class="card col-sm-4 col-xs-8" style="min-width: 40rem; min-height: 40rem;">
-        {{!-- <img src="..." class="card-img-top" alt="..."> --}}
-        <div class="card-body">
-            <h5 class="card-title">Shopping List</h5>
-            <p class="card-text">Here's what is missing from your perfect meal! Perfection not guaranteed. We can't
-                promise your creations will be instagram worthy, sad face.</p>
-        </div>
-        <ul class="list-group">
-            {{#each lists}}
-            <li class="list-group-item" style="justify-content:space-between;">
-                {{ingredient}}
-                <input type="checkbox">
-                <input type="text" style="min-width: 31rem; border: transparent;">
 
-            </li>
-            {{/each}}
-        </ul>
-        <div class="card-body">
-            <a href="#" class="card-link fas fa-cart-plus fa-2x"></a>
-            <a href="#" class="card-link fas fa-trash fa-2x"></a>
-        </div>
-    </div>
-
-    <div class="card  col-sm-12 col-xs-12 col-md-8" style="min-width: 40rem;">
+    <div class="card  col-sm-4 col-xs-8 col-md-3" style="min-width: 40rem;">
         <div class="card-title">
             Dad-Joke Moment
         </div>

@@ -1,7 +1,6 @@
 const { Recipe } = require("../models");
 const route = require("express").Router();
 const isAuthenticated = require("../config/middleware/isAuthenticated");
-const router = require("../controllers/food_controller");
 
 route.get("/api/recipes", isAuthenticated, (req, res) => {
   Recipe.findAll({
