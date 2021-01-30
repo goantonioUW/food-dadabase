@@ -1,15 +1,7 @@
 const { List } = require("../models");
 const router = require("express").Router();
 const isAuthenticated = require("../config/middleware/isAuthenticated");
-// Store List
-router.get("/api/list", isAuthenticated, (req, res) => {
-  List.findAll({
-    where: {
-      username: req.user.email
-    }
-  });
-  return res;
-});
+
 // Add ingredient to list
 router.post("/api/list", isAuthenticated, (req, res) => {
   List.create({
@@ -19,7 +11,7 @@ router.post("/api/list", isAuthenticated, (req, res) => {
     res.json(newIngredient);
   });
 });
-
+// Delete from List
 router.delete("/api/list/:id", isAuthenticated, (req, res) => {
   BookCategory.destroy({
     where: {
