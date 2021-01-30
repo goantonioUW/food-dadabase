@@ -20,4 +20,19 @@ router.post("/api/list", isAuthenticated, (req, res) => {
   });
 });
 
+router.delete("/api/list/:id", isAuthenticated, (req, res) => {
+  BookCategory.destroy({
+    where: {
+      id: req.params.id,
+      username: req.user.email
+    }
+  }).then(result => {
+    if (result) {
+      return res.json({ success: true });
+    }
+
+    res.status(500).json({ success: false });
+  });
+});
+
 module.exports = router;
