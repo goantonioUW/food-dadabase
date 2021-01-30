@@ -1,17 +1,9 @@
 USE fooddadabase_db;
 
-INSERT INTO lists (username, ingredient, amount, measurement, createdAt, updatedAt)
+INSERT INTO list (username, ingredient, createdAt, updatedAt)
 VALUES
-("Bdomschot", "chicken", 1, "5tbs", createdAt(), updatedAt()),
-("goantoniouw", "chicken", 1, "5tbs", createdAt(), updatedAt()),
-("bfourGitHub", "chicken", 1, "5tbs", createdAt(), updatedAt()),
-("jkaganovsky", "chicken", 1, "5tbs", createdAt(), updatedAt()),
-("mfrisch87", "chicken", 1, "5tbs", createdAt(), updatedAt());
+("test@test.com", "Whole Chicken", createdAt(), updatedAt())
 
-INSERT INTO favorites (username, recipe_id, recipe_name, createdAt, updatedAt)
+INSERT INTO favoriterecipes (username, recipeId, recipeImg, recipeName, createdAt, updatedAt)
 VALUES
-("Bdomschot", 12, "chicken soup", createdAt(), updatedAt()),
-("bfourGitHub", 12, "chicken soup", createdAt(), updatedAt()),
-("goantoniouw", 12, "chicken soup", createdAt(), updatedAt()),
-("jkaganovsky", 12, "chicken soup", createdAt(), updatedAt()),
-("mfrisch87", 12, "chicken soup", createdAt(), updatedAt());
+("test@test.com", "http://honestcooking.com/warming-chicken-soup-two-ways", "https://www.edamam.com/web-img/35a/35adea4931612318dbee798e198a3d24.jpg", "Chicken Soup and Two Variations", createdAt(), updatedAt())

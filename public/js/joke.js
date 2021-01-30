@@ -3,7 +3,6 @@ const getJoke = search => {
     type: "GET",
     url: "https://icanhazdadjoke.com",
     success: function(data) {
-      console.log(data);
 
       //do something when request is successfull
 
@@ -20,5 +19,4 @@ const displayJoke = jokes => {
 
   $("#joke").append(`<p>"${jokes}"</p>`);
 
-  console.log(jokes);
 };
