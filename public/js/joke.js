@@ -54,21 +54,27 @@
 
 // findJoke();
 
-$.ajax({
-  type: "GET",
-  url: "https://icanhazdadjoke.com",
-  success: function(data) {
-    console.log(data);
-    //do something when request is successfull
-  },
-  dataType: "json"
-});
-const displayJoke = data => {
-  $("#joke").empty();
+const getJoke = search => {
+  $.ajax({
+    type: "GET",
+    url: "https://icanhazdadjoke.com",
+    success: function(data) {
+      console.log(data);
 
-  for (let i = 0; i < data; i++) {
-    $("#joke").append(`<p>"${data[i].joke}"</p>`);
-  }
+      //do something when request is successfull
+
+      displayJoke(data.joke);
+    },
+    dataType: "json"
+  });
 };
 
-displayJoke();
+$(document).ready(getJoke);
+
+const displayJoke = jokes => {
+  $("#joke").empty();
+
+  $("#joke").append(`<p>"${jokes}"</p>`);
+
+  console.log(jokes);
+};
