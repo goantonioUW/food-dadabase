@@ -17,8 +17,8 @@ const displaySearch = searches => {
 
   for (let i = 0; i < searches.length; i++) {
     $("#recipe-name").append(`
-
-    <img src="${searches[i].recipe.image}"  class="img-thumbnail" alt="">
+    <a href = "${searches[i].recipe.shareAs}" target="_blank">
+    <img src="${searches[i].recipe.image}"  class="img-thumbnail" alt="${searches[i].recipe.label}"></a>
      `);
   }
 };
