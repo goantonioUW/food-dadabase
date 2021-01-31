@@ -4,7 +4,7 @@
 
   ## Table Of Contents
   - [Description](#description)
-  - [Links] (#links)
+  - [Links](#links)
   - [User story](#userstory)
   - [Contributing](#contributing)
   - [Example](#example)
@@ -15,8 +15,8 @@
   recipes while bringing you a laugh along the way. 
 
   ## Links
-  [Github](https://github.com/goantonioUW/food-dadabase)
-  [Heroku](https://new-food-app.herokuapp.com/login)
+  - [Github](https://github.com/goantonioUW/food-dadabase)
+  - [Heroku](https://new-food-app.herokuapp.com/login)
   
   ## User Story
   AS A user, I want to be able to look up recipies and be able to save my favorites for later and have a laugh while doing so. 
@@ -27,11 +27,11 @@
   
 
   ## Contributing
-  [Antonio Gonzalez](http://github.com/goantonioUW),
-  [Michael Frisch ](http://github.com/mfrisch87),
-  [Jailanie Kaganovsky](http://github.com/jkaganovsky),
-  [Hector (Bryan) Moreno ](http://github.com/bfourGitHub),
-  [Benjamin Domschot ](http://github.com/Bdomschot)
+  - [Antonio Gonzalez](http://github.com/goantonioUW),
+  - [Michael Frisch ](http://github.com/mfrisch87),
+  - [Jailanie Kaganovsky](http://github.com/jkaganovsky),
+  - [Hector (Bryan) Moreno ](http://github.com/bfourGitHub),
+  - [Benjamin Domschot ](http://github.com/Bdomschot)
 
 
   ## Example
