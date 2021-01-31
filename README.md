@@ -4,6 +4,7 @@
 
   ## Table Of Contents
   - [Description](#description)
+  - [Links] (#links)
   - [User story](#userstory)
   - [Contributing](#contributing)
   - [Example](#example)
@@ -13,6 +14,10 @@
   Introducing the most amazing recipe finder and shopping list creater out! Designed to help find and favorite 
   recipes while bringing you a laugh along the way. 
 
+  ## Links
+  [Github](https://github.com/goantonioUW/food-dadabase)
+  [Heroku](https://new-food-app.herokuapp.com/login)
+  
   ## User Story
   AS A user, I want to be able to look up recipies and be able to save my favorites for later and have a laugh while doing so. 
 
