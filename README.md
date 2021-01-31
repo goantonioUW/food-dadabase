@@ -5,10 +5,10 @@
   ## Table Of Contents
   - [Description](#description)
   - [Links](#links)
-  - [User story](#userstory)
+  - [User Story](#userstory)
   - [Contributing](#contributing)
   - [Example](#example)
-  - [Presentation](#Presentation)
+  - [Presentation](#presentation)
 
   ## Description 
   Introducing the most amazing recipe finder and shopping list creater out! Designed to help find and favorite 
@@ -16,7 +16,7 @@
 
   ## Links
   - [Github](https://github.com/goantonioUW/food-dadabase)
-  - [Heroku](https://new-food-app.herokuapp.com/login)
+  - [Heroku](https://food-dad-a-base.herokuapp.com/)
   
   ## User Story
   AS A user, I want to be able to look up recipies and be able to save my favorites for later and have a laugh while doing so. 
@@ -27,11 +27,11 @@
   
 
   ## Contributing
-  - [Antonio Gonzalez](http://github.com/goantonioUW),
-  - [Michael Frisch ](http://github.com/mfrisch87),
-  - [Jailanie Kaganovsky](http://github.com/jkaganovsky),
-  - [Hector (Bryan) Moreno ](http://github.com/bfourGitHub),
-  - [Benjamin Domschot ](http://github.com/Bdomschot)
+  - [Antonio Gonzalez](http://github.com/goantonioUW)
+  - [Michael Frisch](http://github.com/mfrisch87)
+  - [Jailanie Kaganovsky](http://github.com/jkaganovsky)
+  - [Hector (Bryan) Moreno](http://github.com/bfourGitHub)
+  - [Benjamin Domschot](http://github.com/Bdomschot)
 
 
   ## Example
