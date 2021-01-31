@@ -11,6 +11,9 @@ const getSearch = search => {
   });
 };
 
+
+
+
 // Passing in the results from our api search onto the searchResults.handlebars
 const displaySearch = searches => {
   $("#recipe-name").empty();
